@@ -210,3 +210,4 @@ hide_edge_borders both
 
 # Auto start
 exec_always feh --bg-scale /home/tchisso/Pictures/rickme.jpg
+exec --no-startup-id dunst &
