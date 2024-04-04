@@ -186,24 +186,29 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+#Gaps
+gaps inner 6px
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status --config ~/.i3status.conf
+        status_command i3status --config  ~/.i3status.conf
+	i3bar_command i3bar --transparency
 	position top
 	colors {
-		focused_workspace #3e015e #3e015e #ffffff
+		background #000000BF
+		focused_workspace #3e015eBF #3e015eBF #ffffffBF
 	}
 }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #000000 #3e015e #ffffff #000000   #000000
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #000000 #3e015eBF #ffffff #000000   #000000
+client.focused_inactive #333333 #5f676aBF #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222BF #888888 #292d2e   #222222
+client.urgent           #2f343a #900000BF #ffffff #900000   #900000
+client.placeholder      #000000BF #0c0c0cBF #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
+client.background       #000000CC
 
 hide_edge_borders both
 
